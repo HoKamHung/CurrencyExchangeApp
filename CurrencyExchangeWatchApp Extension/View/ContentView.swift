@@ -15,9 +15,6 @@ struct ContentView: View {
 
     var body: some View {
         VStack{
-            HStack {
-                Text(viewModel.errorMessage)
-            }
             HStack{
                 Text("From:")
                     .padding(.leading)
@@ -29,8 +26,8 @@ struct ContentView: View {
                 TextField("Amount", text: $inputValue)
                     .multilineTextAlignment(.trailing)
                     .onChange(of: inputValue, perform: { value in
-                        viewModel.calculate(amount: Double(inputValue) ?? 0)
-                        toAmount = String(format:"%.2f", viewModel.to ?? 0)
+                        viewModel.calculate(amount: Double(value) ?? 0)
+                        toAmount = String(format:"%.2f", viewModel.total)
                     })
             }
             HStack {
