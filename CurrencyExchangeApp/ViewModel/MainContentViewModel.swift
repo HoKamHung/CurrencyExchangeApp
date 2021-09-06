@@ -10,11 +10,13 @@ import SwiftUI
 import Combine
 
 final class MainContentViewModel: ObservableObject {
-    // Constants
+    // API Base URL
     private static let baseURL : String = "http://apilayer.net/api"
 
+    // Cancellable Objects
     private var cancellableObjects: [AnyCancellable] = []
 
+    // Create API and Passthrough Subject - to broadcast elements to downstream subscribers
     private let apiController: APIController;
     private let onPassthroughSubject = PassthroughSubject<Void, Never>()
     private let liveRateRsponseObject = PassthroughSubject<LiveRateResponse, Never>()
@@ -22,9 +24,12 @@ final class MainContentViewModel: ObservableObject {
     private let currencyResponseObject = PassthroughSubject<CurrencyListResponse, Never>()
     private let convertResponseObject = PassthroughSubject<ConvertResponse, Never>()
 
+    // Response objects for API calls
     @Published private(set) var liveRateObject : LiveRateResponse = LiveRateResponse()
     @Published private(set) var convertObject : ConvertResponse = ConvertResponse()
     @Published private(set) var currencyListObject : CurrencyListResponse = CurrencyListResponse()
+
+    // Error message and output rate
     @Published var errorMessage = ""
     @Published private(set) var outputRate = 0;
 
@@ -78,6 +83,7 @@ final class MainContentViewModel: ObservableObject {
                     apiController.response(from: currencyListRequest)
                         .catch{ [weak self] error -> Empty<CurrencyListResponse, Never> in
                             self?.errorObject.send(error)
+                            print(error)
                             return .init()
                         }
                 }
