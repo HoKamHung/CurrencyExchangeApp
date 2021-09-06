@@ -34,9 +34,9 @@ final class MainContentViewModel: ObservableObject {
     @Published private(set) var outputRate = 0;
 
     public var from :String = "USD"
-    public var to:String?
-    public var amount:Double?
-    public var total:Double = 0
+    @Published public var to:String?
+    @Published public var amount:Double?
+    @Published public var total:Double = 0
 
     enum Input {
         case onAppear

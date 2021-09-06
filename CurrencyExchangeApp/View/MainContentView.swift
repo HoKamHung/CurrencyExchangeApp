@@ -26,7 +26,7 @@ struct MainContentView: View {
                         .multilineTextAlignment(.trailing)
                         .keyboardType(.numberPad)
                         .onChange(of: inputValue, perform: { value in
-                            viewModel.calculate(amount: Double(inputValue) ?? 0)
+                            viewModel.calculate(amount: Double(value) ?? 0)
                         })
                         .padding(.trailing)
                 }
@@ -46,7 +46,7 @@ struct MainContentView: View {
                         Text(toButtonTitle)
                     }
                     Spacer()
-                    Text(String(String(format: "%.2f", viewModel.total)))
+                    Text(String(format: "%.2f", viewModel.total))
                         .padding(.trailing)
                 }
                 Text(viewModel.errorMessage)
