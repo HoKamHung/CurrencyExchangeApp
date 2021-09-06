@@ -14,40 +14,51 @@ struct ContentView: View {
     @State public var toAmount:String
 
     var body: some View {
-        VStack{
-            HStack{
-                Text("From:")
-                    .padding(.leading)
-                Spacer()
-                Text("USD")
-                    .padding(.trailing)
-            }
-            HStack {
-                TextField("Amount", text: $inputValue)
-                    .multilineTextAlignment(.trailing)
-                    .onChange(of: inputValue, perform: { value in
-                        viewModel.calculate(amount: Double(value) ?? 0)
-                        toAmount = String(format:"%.2f", viewModel.total)
-                    })
-            }
-            HStack {
-                Text("To: ")
-                    .padding(.leading)
-                Spacer()
-                NavigationLink(
-                    destination: WatchCurrencyListView(viewModel: viewModel, contentView: self),
-                    label: {
-                        Text(toButtonTitle)
-                    }
-                )
-            }
-            HStack {
-                TextField("Amount", text:$toAmount)
-                    .disabled(true)
-                    .multilineTextAlignment(.trailing)
-            }
-            .multilineTextAlignment(.trailing)
+        ScrollView {
+            VStack{
+                HStack{
+                    Text("From:")
+                    Spacer()
+                }
+                .padding(.horizontal)
+                HStack {
+                    Text("USD")
+                    Spacer()
+                }
+                .padding(.horizontal)
+                HStack {
+                    TextField("Amount", text: $inputValue)
+                        .multilineTextAlignment(.trailing)
+                        .onChange(of: inputValue, perform: { value in
+                            viewModel.calculate(amount: Double(value) ?? 0)
+                            toAmount = String(format:"%.2f", viewModel.total)
+                        })
+                }
+                .padding(.horizontal)
+                HStack {
+                    Text("To: ")
+                    Spacer()
+                }
+                .padding(.horizontal)
+                HStack {
+                    NavigationLink(
+                        destination: WatchCurrencyListView(viewModel: viewModel, contentView: self),
+                        label: {
+                            Text(toButtonTitle)
+                        }
+                    )
+                    .padding(.horizontal)
+                }
+                .padding(.horizontal)
+                HStack {
+                    TextField("Amount", text:$toAmount)
+                        .disabled(true)
+                        .multilineTextAlignment(.trailing)
+                }
+                .multilineTextAlignment(.trailing)
+                .padding(.horizontal)
 
+            }
         }
         .navigationBarTitle("Currency")
         .onAppear(perform: {self.viewModel.apply(.onAppear)})
