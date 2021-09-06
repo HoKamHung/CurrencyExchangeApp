@@ -37,6 +37,16 @@
 		844370DA26E65F9200925DFA /* CurrencyExchangeWatchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370D926E65F9200925DFA /* CurrencyExchangeWatchAppTests.swift */; };
 		844370E526E65F9300925DFA /* CurrencyExchangeWatchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370E426E65F9300925DFA /* CurrencyExchangeWatchAppUITests.swift */; };
 		844370E926E65F9300925DFA /* CurrencyExchangeWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 844370B226E65F9000925DFA /* CurrencyExchangeWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84CEF40726E673C700D347DA /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A16AE25AC725E00CDD982 /* APIController.swift */; };
+		84CEF40826E673C700D347DA /* ConvertRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A173725ACE40A00CDD982 /* ConvertRequest.swift */; };
+		84CEF40926E673C700D347DA /* CurrencyListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A174425ACEF5700CDD982 /* CurrencyListRequest.swift */; };
+		84CEF40A26E673C700D347DA /* LiveRateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A172D25ACD41100CDD982 /* LiveRateResponse.swift */; };
+		84CEF40B26E673C700D347DA /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A173225ACD75500CDD982 /* UserDefaultsController.swift */; };
+		84CEF40C26E673C700D347DA /* LiveRateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A16B325AC835300CDD982 /* LiveRateRequest.swift */; };
+		84CEF40D26E673C700D347DA /* CurrencyListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A174925ACEF6000CDD982 /* CurrencyListResponse.swift */; };
+		84CEF40E26E673C700D347DA /* ConvertResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A173F25ACE43D00CDD982 /* ConvertResponse.swift */; };
+		84CEF40F26E673F300D347DA /* MainContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A169E25AC6F4900CDD982 /* MainContentViewModel.swift */; };
+		84CEF41426E67A3C00D347DA /* WatchCurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEF41326E67A3C00D347DA /* WatchCurrencyListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +154,7 @@
 		844370E026E65F9300925DFA /* CurrencyExchangeWatchAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyExchangeWatchAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844370E426E65F9300925DFA /* CurrencyExchangeWatchAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeWatchAppUITests.swift; sourceTree = "<group>"; };
 		844370E626E65F9300925DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CEF41326E67A3C00D347DA /* WatchCurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCurrencyListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,8 +308,10 @@
 		844370BF26E65F9200925DFA /* CurrencyExchangeWatchApp Extension */ = {
 			isa = PBXGroup;
 			children = (
+				84CEF41226E67A1400D347DA /* ViewModel */,
+				84CEF41126E67A1000D347DA /* View */,
+				84CEF41026E67A0900D347DA /* Model */,
 				844370C026E65F9200925DFA /* CurrencyExchangeAppApp.swift */,
-				844370C226E65F9200925DFA /* ContentView.swift */,
 				844370C426E65F9200925DFA /* NotificationController.swift */,
 				844370C626E65F9200925DFA /* NotificationView.swift */,
 				844370C826E65F9200925DFA /* ComplicationController.swift */,
@@ -334,6 +347,29 @@
 				844370E626E65F9300925DFA /* Info.plist */,
 			);
 			path = CurrencyExchangeWatchAppUITests;
+			sourceTree = "<group>";
+		};
+		84CEF41026E67A0900D347DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84CEF41126E67A1000D347DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				844370C226E65F9200925DFA /* ContentView.swift */,
+				84CEF41326E67A3C00D347DA /* WatchCurrencyListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84CEF41226E67A1400D347DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,10 +623,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				844370C526E65F9200925DFA /* NotificationController.swift in Sources */,
+				84CEF41426E67A3C00D347DA /* WatchCurrencyListView.swift in Sources */,
+				84CEF40E26E673C700D347DA /* ConvertResponse.swift in Sources */,
+				84CEF40A26E673C700D347DA /* LiveRateResponse.swift in Sources */,
+				84CEF40C26E673C700D347DA /* LiveRateRequest.swift in Sources */,
+				84CEF40D26E673C700D347DA /* CurrencyListResponse.swift in Sources */,
 				844370C326E65F9200925DFA /* ContentView.swift in Sources */,
+				84CEF40726E673C700D347DA /* APIController.swift in Sources */,
+				84CEF40F26E673F300D347DA /* MainContentViewModel.swift in Sources */,
+				84CEF40B26E673C700D347DA /* UserDefaultsController.swift in Sources */,
 				844370C926E65F9200925DFA /* ComplicationController.swift in Sources */,
+				84CEF40926E673C700D347DA /* CurrencyListRequest.swift in Sources */,
 				844370C126E65F9200925DFA /* CurrencyExchangeAppApp.swift in Sources */,
 				844370C726E65F9200925DFA /* NotificationView.swift in Sources */,
+				84CEF40826E673C700D347DA /* ConvertRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

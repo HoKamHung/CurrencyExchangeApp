@@ -12,7 +12,7 @@ struct CurrencyExchangeAppApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ContentView(viewModel: .init(), inputValue: "0", toButtonTitle: "Select Currency", toAmount: "0")
             }
         }
 

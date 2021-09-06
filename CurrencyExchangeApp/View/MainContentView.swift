@@ -68,6 +68,6 @@ struct MainContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainContentView(viewModel: .init(), inputValue: "", toButtonTitle: "Select Currency")
+        MainContentView(viewModel: .init(), inputValue: "0", toButtonTitle: "Select Currency")
     }
 }
