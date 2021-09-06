@@ -6,5 +6,5 @@ Framework:
 - SwiftUI
 
 Build Target:
-CurrencyExchangeApp - 14.3
-CurrencyExchangeWatchApp - 7.4
+- CurrencyExchangeApp - 14.3
+- CurrencyExchangeWatchApp - 7.4
