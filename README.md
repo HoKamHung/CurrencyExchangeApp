@@ -1,6 +1,6 @@
 # CurrencyExchangeApp
-CurrencyExchangeApp - iOS Application
-CurrencyExchangeWatchApp - watchOS Application
+- CurrencyExchangeApp - iOS Application
+- CurrencyExchangeWatchApp - watchOS Application
 
 Framework:
 - SwiftUI
