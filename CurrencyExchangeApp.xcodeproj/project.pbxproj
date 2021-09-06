@@ -25,6 +25,18 @@
 		841A174A25ACEF6000CDD982 /* CurrencyListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A174925ACEF6000CDD982 /* CurrencyListResponse.swift */; };
 		841A176925AD0CAC00CDD982 /* CurrencyAPIUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A176825AD0CAC00CDD982 /* CurrencyAPIUnitTest.swift */; };
 		841A176E25AD0D2E00CDD982 /* UnitTestAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A176D25AD0D2E00CDD982 /* UnitTestAPIController.swift */; };
+		844370B526E65F9100925DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844370B426E65F9100925DFA /* Assets.xcassets */; };
+		844370BC26E65F9200925DFA /* CurrencyExchangeWatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 844370BB26E65F9200925DFA /* CurrencyExchangeWatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		844370C126E65F9200925DFA /* CurrencyExchangeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370C026E65F9200925DFA /* CurrencyExchangeAppApp.swift */; };
+		844370C326E65F9200925DFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370C226E65F9200925DFA /* ContentView.swift */; };
+		844370C526E65F9200925DFA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370C426E65F9200925DFA /* NotificationController.swift */; };
+		844370C726E65F9200925DFA /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370C626E65F9200925DFA /* NotificationView.swift */; };
+		844370C926E65F9200925DFA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370C826E65F9200925DFA /* ComplicationController.swift */; };
+		844370CB26E65F9200925DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844370CA26E65F9200925DFA /* Assets.xcassets */; };
+		844370CE26E65F9200925DFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844370CD26E65F9200925DFA /* Preview Assets.xcassets */; };
+		844370DA26E65F9200925DFA /* CurrencyExchangeWatchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370D926E65F9200925DFA /* CurrencyExchangeWatchAppTests.swift */; };
+		844370E526E65F9300925DFA /* CurrencyExchangeWatchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844370E426E65F9300925DFA /* CurrencyExchangeWatchAppUITests.swift */; };
+		844370E926E65F9300925DFA /* CurrencyExchangeWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 844370B226E65F9000925DFA /* CurrencyExchangeWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +47,60 @@
 			remoteGlobalIDString = 841A166125AC6CB700CDD982;
 			remoteInfo = CurrencyExchangeApp;
 		};
+		844370BD26E65F9200925DFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841A165A25AC6CB700CDD982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844370BA26E65F9200925DFA;
+			remoteInfo = "CurrencyExchangeWatchApp Extension";
+		};
+		844370D626E65F9200925DFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841A165A25AC6CB700CDD982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844370BA26E65F9200925DFA;
+			remoteInfo = "CurrencyExchangeWatchApp Extension";
+		};
+		844370E126E65F9300925DFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841A165A25AC6CB700CDD982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844370B126E65F9000925DFA;
+			remoteInfo = CurrencyExchangeWatchApp;
+		};
+		844370E726E65F9300925DFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841A165A25AC6CB700CDD982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844370B126E65F9000925DFA;
+			remoteInfo = CurrencyExchangeWatchApp;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		844370EA26E65F9300925DFA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				844370E926E65F9300925DFA /* CurrencyExchangeWatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370ED26E65F9300925DFA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				844370BC26E65F9200925DFA /* CurrencyExchangeWatchApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		841A166225AC6CB700CDD982 /* CurrencyExchangeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyExchangeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +125,25 @@
 		841A174925ACEF6000CDD982 /* CurrencyListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyListResponse.swift; path = CurrencyExchangeApp/Service/CurrencyListResponse.swift; sourceTree = SOURCE_ROOT; };
 		841A176825AD0CAC00CDD982 /* CurrencyAPIUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPIUnitTest.swift; sourceTree = "<group>"; };
 		841A176D25AD0D2E00CDD982 /* UnitTestAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestAPIController.swift; sourceTree = "<group>"; };
+		844370B226E65F9000925DFA /* CurrencyExchangeWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyExchangeWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		844370B426E65F9100925DFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		844370B626E65F9100925DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844370BB26E65F9200925DFA /* CurrencyExchangeWatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CurrencyExchangeWatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		844370C026E65F9200925DFA /* CurrencyExchangeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeAppApp.swift; sourceTree = "<group>"; };
+		844370C226E65F9200925DFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		844370C426E65F9200925DFA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		844370C626E65F9200925DFA /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		844370C826E65F9200925DFA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		844370CA26E65F9200925DFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		844370CD26E65F9200925DFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		844370CF26E65F9200925DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844370D026E65F9200925DFA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		844370D526E65F9200925DFA /* CurrencyExchangeWatchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyExchangeWatchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844370D926E65F9200925DFA /* CurrencyExchangeWatchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeWatchAppTests.swift; sourceTree = "<group>"; };
+		844370DB26E65F9200925DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844370E026E65F9300925DFA /* CurrencyExchangeWatchAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyExchangeWatchAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844370E426E65F9300925DFA /* CurrencyExchangeWatchAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeWatchAppUITests.swift; sourceTree = "<group>"; };
+		844370E626E65F9300925DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +161,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		844370B826E65F9200925DFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370D226E65F9200925DFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370DD26E65F9300925DFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,6 +190,10 @@
 			children = (
 				841A166425AC6CB700CDD982 /* CurrencyExchangeApp */,
 				841A167B25AC6CBB00CDD982 /* CurrencyExchangeAppTests */,
+				844370B326E65F9000925DFA /* CurrencyExchangeWatchApp */,
+				844370BF26E65F9200925DFA /* CurrencyExchangeWatchApp Extension */,
+				844370D826E65F9200925DFA /* CurrencyExchangeWatchAppTests */,
+				844370E326E65F9300925DFA /* CurrencyExchangeWatchAppUITests */,
 				841A166325AC6CB700CDD982 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +203,10 @@
 			children = (
 				841A166225AC6CB700CDD982 /* CurrencyExchangeApp.app */,
 				841A167825AC6CBB00CDD982 /* CurrencyExchangeAppTests.xctest */,
+				844370B226E65F9000925DFA /* CurrencyExchangeWatchApp.app */,
+				844370BB26E65F9200925DFA /* CurrencyExchangeWatchApp Extension.appex */,
+				844370D526E65F9200925DFA /* CurrencyExchangeWatchAppTests.xctest */,
+				844370E026E65F9300925DFA /* CurrencyExchangeWatchAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +285,57 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		844370B326E65F9000925DFA /* CurrencyExchangeWatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				844370B426E65F9100925DFA /* Assets.xcassets */,
+				844370B626E65F9100925DFA /* Info.plist */,
+			);
+			path = CurrencyExchangeWatchApp;
+			sourceTree = "<group>";
+		};
+		844370BF26E65F9200925DFA /* CurrencyExchangeWatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				844370C026E65F9200925DFA /* CurrencyExchangeAppApp.swift */,
+				844370C226E65F9200925DFA /* ContentView.swift */,
+				844370C426E65F9200925DFA /* NotificationController.swift */,
+				844370C626E65F9200925DFA /* NotificationView.swift */,
+				844370C826E65F9200925DFA /* ComplicationController.swift */,
+				844370CA26E65F9200925DFA /* Assets.xcassets */,
+				844370CF26E65F9200925DFA /* Info.plist */,
+				844370D026E65F9200925DFA /* PushNotificationPayload.apns */,
+				844370CC26E65F9200925DFA /* Preview Content */,
+			);
+			path = "CurrencyExchangeWatchApp Extension";
+			sourceTree = "<group>";
+		};
+		844370CC26E65F9200925DFA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				844370CD26E65F9200925DFA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		844370D826E65F9200925DFA /* CurrencyExchangeWatchAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				844370D926E65F9200925DFA /* CurrencyExchangeWatchAppTests.swift */,
+				844370DB26E65F9200925DFA /* Info.plist */,
+			);
+			path = CurrencyExchangeWatchAppTests;
+			sourceTree = "<group>";
+		};
+		844370E326E65F9300925DFA /* CurrencyExchangeWatchAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				844370E426E65F9300925DFA /* CurrencyExchangeWatchAppUITests.swift */,
+				844370E626E65F9300925DFA /* Info.plist */,
+			);
+			path = CurrencyExchangeWatchAppUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,10 +346,12 @@
 				841A165E25AC6CB700CDD982 /* Sources */,
 				841A165F25AC6CB700CDD982 /* Frameworks */,
 				841A166025AC6CB700CDD982 /* Resources */,
+				844370EA26E65F9300925DFA /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				844370E826E65F9300925DFA /* PBXTargetDependency */,
 			);
 			name = CurrencyExchangeApp;
 			productName = CurrencyExchangeApp;
@@ -210,13 +376,83 @@
 			productReference = 841A167825AC6CBB00CDD982 /* CurrencyExchangeAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		844370B126E65F9000925DFA /* CurrencyExchangeWatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844370F526E65F9300925DFA /* Build configuration list for PBXNativeTarget "CurrencyExchangeWatchApp" */;
+			buildPhases = (
+				844370B026E65F9000925DFA /* Resources */,
+				844370ED26E65F9300925DFA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844370BE26E65F9200925DFA /* PBXTargetDependency */,
+			);
+			name = CurrencyExchangeWatchApp;
+			productName = CurrencyExchangeWatchApp;
+			productReference = 844370B226E65F9000925DFA /* CurrencyExchangeWatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		844370BA26E65F9200925DFA /* CurrencyExchangeWatchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844370F426E65F9300925DFA /* Build configuration list for PBXNativeTarget "CurrencyExchangeWatchApp Extension" */;
+			buildPhases = (
+				844370B726E65F9200925DFA /* Sources */,
+				844370B826E65F9200925DFA /* Frameworks */,
+				844370B926E65F9200925DFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CurrencyExchangeWatchApp Extension";
+			productName = "CurrencyExchangeWatchApp Extension";
+			productReference = 844370BB26E65F9200925DFA /* CurrencyExchangeWatchApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		844370D426E65F9200925DFA /* CurrencyExchangeWatchAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844370F626E65F9300925DFA /* Build configuration list for PBXNativeTarget "CurrencyExchangeWatchAppTests" */;
+			buildPhases = (
+				844370D126E65F9200925DFA /* Sources */,
+				844370D226E65F9200925DFA /* Frameworks */,
+				844370D326E65F9200925DFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844370D726E65F9200925DFA /* PBXTargetDependency */,
+			);
+			name = CurrencyExchangeWatchAppTests;
+			productName = CurrencyExchangeWatchAppTests;
+			productReference = 844370D526E65F9200925DFA /* CurrencyExchangeWatchAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		844370DF26E65F9300925DFA /* CurrencyExchangeWatchAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844370F726E65F9300925DFA /* Build configuration list for PBXNativeTarget "CurrencyExchangeWatchAppUITests" */;
+			buildPhases = (
+				844370DC26E65F9300925DFA /* Sources */,
+				844370DD26E65F9300925DFA /* Frameworks */,
+				844370DE26E65F9300925DFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844370E226E65F9300925DFA /* PBXTargetDependency */,
+			);
+			name = CurrencyExchangeWatchAppUITests;
+			productName = CurrencyExchangeWatchAppUITests;
+			productReference = 844370E026E65F9300925DFA /* CurrencyExchangeWatchAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		841A165A25AC6CB700CDD982 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					841A166125AC6CB700CDD982 = {
@@ -225,6 +461,20 @@
 					841A167725AC6CBB00CDD982 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 841A166125AC6CB700CDD982;
+					};
+					844370B126E65F9000925DFA = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					844370BA26E65F9200925DFA = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					844370D426E65F9200925DFA = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 844370BA26E65F9200925DFA;
+					};
+					844370DF26E65F9300925DFA = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 844370B126E65F9000925DFA;
 					};
 				};
 			};
@@ -243,6 +493,10 @@
 			targets = (
 				841A166125AC6CB700CDD982 /* CurrencyExchangeApp */,
 				841A167725AC6CBB00CDD982 /* CurrencyExchangeAppTests */,
+				844370B126E65F9000925DFA /* CurrencyExchangeWatchApp */,
+				844370BA26E65F9200925DFA /* CurrencyExchangeWatchApp Extension */,
+				844370D426E65F9200925DFA /* CurrencyExchangeWatchAppTests */,
+				844370DF26E65F9300925DFA /* CurrencyExchangeWatchAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +513,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		841A167625AC6CBB00CDD982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370B026E65F9000925DFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844370B526E65F9100925DFA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370B926E65F9200925DFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844370CE26E65F9200925DFA /* Preview Assets.xcassets in Resources */,
+				844370CB26E65F9200925DFA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370D326E65F9200925DFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370DE26E65F9300925DFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,6 +582,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		844370B726E65F9200925DFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844370C526E65F9200925DFA /* NotificationController.swift in Sources */,
+				844370C326E65F9200925DFA /* ContentView.swift in Sources */,
+				844370C926E65F9200925DFA /* ComplicationController.swift in Sources */,
+				844370C126E65F9200925DFA /* CurrencyExchangeAppApp.swift in Sources */,
+				844370C726E65F9200925DFA /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370D126E65F9200925DFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844370DA26E65F9200925DFA /* CurrencyExchangeWatchAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844370DC26E65F9300925DFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844370E526E65F9300925DFA /* CurrencyExchangeWatchAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -304,6 +617,26 @@
 			isa = PBXTargetDependency;
 			target = 841A166125AC6CB700CDD982 /* CurrencyExchangeApp */;
 			targetProxy = 841A167925AC6CBB00CDD982 /* PBXContainerItemProxy */;
+		};
+		844370BE26E65F9200925DFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844370BA26E65F9200925DFA /* CurrencyExchangeWatchApp Extension */;
+			targetProxy = 844370BD26E65F9200925DFA /* PBXContainerItemProxy */;
+		};
+		844370D726E65F9200925DFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844370BA26E65F9200925DFA /* CurrencyExchangeWatchApp Extension */;
+			targetProxy = 844370D626E65F9200925DFA /* PBXContainerItemProxy */;
+		};
+		844370E226E65F9300925DFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844370B126E65F9000925DFA /* CurrencyExchangeWatchApp */;
+			targetProxy = 844370E126E65F9300925DFA /* PBXContainerItemProxy */;
+		};
+		844370E826E65F9300925DFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844370B126E65F9000925DFA /* CurrencyExchangeWatchApp */;
+			targetProxy = 844370E726E65F9300925DFA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -521,6 +854,182 @@
 			};
 			name = Release;
 		};
+		844370EB26E65F9300925DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ENZQ8J62J;
+				IBSC_MODULE = CurrencyExchangeWatchApp_Extension;
+				INFOPLIST_FILE = CurrencyExchangeWatchApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = kevinho0236.CurrencyExchangeApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		844370EC26E65F9300925DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ENZQ8J62J;
+				IBSC_MODULE = CurrencyExchangeWatchApp_Extension;
+				INFOPLIST_FILE = CurrencyExchangeWatchApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = kevinho0236.CurrencyExchangeApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		844370EE26E65F9300925DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CurrencyExchangeWatchApp Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8ENZQ8J62J;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CurrencyExchangeWatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinho0236.CurrencyExchangeApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		844370EF26E65F9300925DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CurrencyExchangeWatchApp Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8ENZQ8J62J;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CurrencyExchangeWatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinho0236.CurrencyExchangeApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		844370F026E65F9300925DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ENZQ8J62J;
+				INFOPLIST_FILE = CurrencyExchangeWatchAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinho0236.CurrencyExchangeApp.CurrencyExchangeWatchAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyExchangeWatchApp Extension.appex/CurrencyExchangeWatchApp Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		844370F126E65F9300925DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ENZQ8J62J;
+				INFOPLIST_FILE = CurrencyExchangeWatchAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinho0236.CurrencyExchangeApp.CurrencyExchangeWatchAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyExchangeWatchApp Extension.appex/CurrencyExchangeWatchApp Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		844370F226E65F9300925DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ENZQ8J62J;
+				INFOPLIST_FILE = CurrencyExchangeWatchAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinho0236.CurrencyExchangeApp.CurrencyExchangeWatchAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = CurrencyExchangeWatchApp;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		844370F326E65F9300925DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ENZQ8J62J;
+				INFOPLIST_FILE = CurrencyExchangeWatchAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinho0236.CurrencyExchangeApp.CurrencyExchangeWatchAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = CurrencyExchangeWatchApp;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -547,6 +1056,42 @@
 			buildConfigurations = (
 				841A169025AC6CBB00CDD982 /* Debug */,
 				841A169125AC6CBB00CDD982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844370F426E65F9300925DFA /* Build configuration list for PBXNativeTarget "CurrencyExchangeWatchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844370EE26E65F9300925DFA /* Debug */,
+				844370EF26E65F9300925DFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844370F526E65F9300925DFA /* Build configuration list for PBXNativeTarget "CurrencyExchangeWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844370EB26E65F9300925DFA /* Debug */,
+				844370EC26E65F9300925DFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844370F626E65F9300925DFA /* Build configuration list for PBXNativeTarget "CurrencyExchangeWatchAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844370F026E65F9300925DFA /* Debug */,
+				844370F126E65F9300925DFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844370F726E65F9300925DFA /* Build configuration list for PBXNativeTarget "CurrencyExchangeWatchAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844370F226E65F9300925DFA /* Debug */,
+				844370F326E65F9300925DFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
