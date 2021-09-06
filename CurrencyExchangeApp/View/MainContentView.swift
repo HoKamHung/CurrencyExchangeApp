@@ -10,47 +10,53 @@ import SwiftUI
 struct MainContentView: View {
     @ObservedObject var viewModel: MainContentViewModel
     @State public var inputValue: String
+    @State public var toButtonTitle: String
 
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
+                    Text("From: ")
+                        .padding(.leading)
+                    Spacer()
                     Text("USD")
-                    .padding(.leading)
+                        .padding(.trailing)
                     Spacer()
                     TextField("Amount", text: $inputValue)
+                        .multilineTextAlignment(.trailing)
                         .keyboardType(.numberPad)
                         .onChange(of: inputValue, perform: { value in
-                            do {
-                                try viewModel.calculate(amount: Double(inputValue)!)
-                            } catch {
-                                viewModel.calculate(amount: 0)
-                            }
+                            viewModel.calculate(amount: Double(inputValue) ?? 0)
                         })
                         .padding(.trailing)
                 }
                 HStack {
+                    Text("To: ")
+                        .padding(.leading)
                     Menu {
                         ForEach(viewModel.currencyListObject.currencies.sorted(by: <), id: \.key) { key, value in
                             Button {
                                 viewModel.to = key
+                                toButtonTitle = String(format: "%@(%@)", value, key)
                             } label: {
                                 Text(value)
                             }
                         }
                     } label: {
-                        Text(viewModel.to ?? "Output Currency")
+                        Text(toButtonTitle)
                     }
-                    .padding(.leading)
                     Spacer()
-                    Text(String(viewModel.total))
+                    Text(String(String(format: "%.2f", viewModel.total)))
                         .padding(.trailing)
                 }
                 Text(viewModel.errorMessage)
-                List() {
-                    ForEach(viewModel.liveRateObject.quotes.sorted(by: <), id:\.key) {
-                        key, value in
-                        CurrencyListView(currencyType: key, currencyValue: Double(value))
+                Spacer()
+                List {
+                    Section(header: Text("Currency Rate List")) {
+                        ForEach(viewModel.liveRateObject.quotes.sorted(by: <), id:\.key) {
+                            key, value in
+                            CurrencyListView(currencyType: key, currencyValue: Double(value))
+                        }
                     }
                 }
             }
@@ -62,6 +68,6 @@ struct MainContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainContentView(viewModel: .init(), inputValue: "")
+        MainContentView(viewModel: .init(), inputValue: "", toButtonTitle: "Select Currency")
     }
 }

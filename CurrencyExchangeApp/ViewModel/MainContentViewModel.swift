@@ -135,9 +135,12 @@ final class MainContentViewModel: ObservableObject {
     // calculate the total value of the currency rate
     public func calculate (amount: Double) {
 
-        self.amount = amount;
-        let rate = liveRateObject.quotes[from + to!]
+        if to != nil
+        {
+            self.amount = amount;
+            let rate = liveRateObject.quotes[from + to!]
 
-        total = amount * rate!;
+            total = amount * rate!;
+        }
     }
 }
